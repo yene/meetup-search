@@ -1,6 +1,6 @@
 # Meetup Search Plus
 
-Better UI to search for meetups.
+![screenshot](screenshot.png)
 
 ## Features which meetup.com does not have
 * Filter events by start time so you find afterwork events easier.
@@ -18,5 +18,3 @@ Better UI to search for meetups.
 * radius parameter takes only values rounded to 0.5
 * find/topic_categories is not sorted by locale
 * page parameter is a maxiumum of results shown, not minimum
-
-![screenshot](screenshot.png)
