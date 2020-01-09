@@ -68,8 +68,6 @@ import {OAuthKey} from '@/api/secrets.js';
 import axios from 'axios';
 import dayjs from 'dayjs';
 
-const REDIRECT_URL = 'http://localhost:8080/index.html';
-
 export default {
   name: 'MeetupList',
   data() {
@@ -128,7 +126,8 @@ export default {
   },
   methods: {
     signIn() {
-      window.location.replace(`https://secure.meetup.com/oauth2/authorize?client_id=${OAuthKey}&response_type=token&redirect_uri=${REDIRECT_URL}`);
+      var redirectURL = document.location;
+      window.location.replace(`https://secure.meetup.com/oauth2/authorize?client_id=${OAuthKey}&response_type=token&redirect_uri=${redirectURL}`);
       // PopupCenter(`https://secure.meetup.com/oauth2/authorize?client_id=${OAuthKey}&response_type=token&redirect_uri=${REDIRECT_URL}`, 'Meetup Sign In', '900', '500');
     },
     shareLocation() {
